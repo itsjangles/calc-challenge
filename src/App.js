@@ -1,23 +1,20 @@
 import logo from './logo.svg';
 import './App.css';
+import Display from './components/display/Display';
+import Keypad from './components/keypad/Keypad';
+import { useState } from 'react';
 
 function App() {
+  const [output, setOutput] = useState();
+
+  const keyPressed = (key, value) => {
+    console.log(key, value);
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Display output={output} />
+      <Keypad onKeyPressed={(k,v) => {keyPressed(k,v)}} />
     </div>
   );
 }
