@@ -14,7 +14,7 @@ function App() {
     console.log(key, value);
     // https://stackoverflow.com/questions/175739/built-in-way-in-javascript-to-check-if-a-string-is-a-valid-number
     const number = parseInt(key);
-    if (isNaN(number)) {
+    if (isNaN(number) && key !== '.') {
       const parsedValue = parseFloat(output);
       if (operation) {
         // https://stackoverflow.com/questions/15401186/how-to-call-a-function-from-a-switch-statement-in-javascript        
