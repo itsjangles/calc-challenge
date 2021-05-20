@@ -1,4 +1,4 @@
-import logo from './logo.svg';
+//import logo from './logo.svg';
 import './App.css';
 import Display from './components/Display';
 import Keypad from './components/Keypad';
@@ -35,6 +35,8 @@ function App() {
             break;
           case '=':
             newValue = parsedValue;
+            break;
+          default:
             break;
         }
         setValue(newValue);

@@ -1,14 +1,7 @@
 import "../styles/Keypad.css";
-import { useEffect, useState } from "react";
 import Key from "./Key";
 
 function Keypad({ onKeyPressed: setKeyPressed }) {
-//    const [keyPressed, setKeyPressed] = useState();
-
-    // useEffect(() => {
-    //     onKeyPressed(keyPressed, keyPressed);
-    // }, [keyPressed]);
-
     return (
         <div className="container" style={{ border: "1px solid black" }}>
             <Key style={{ gridRow: "5", gridColumn: "1 / span 2" }} name="0" func={(k) => { setKeyPressed(k) }} />
